@@ -32,18 +32,18 @@
 
   if ($moviecat == "AF"){
     $days = ["Monday", "Tuesday", "Saturday", "Sunday"];
-    //$times = {"Monday":"6pm","Tuesday":"6pm","Saturday":"3pm","Sunday":"3pm"};
+    Print "<script>var times = {'Monday':'6pm', 'Tuesday': '6pm', 'Saturday':'3pm', 'Sunday':'3pm'};</script>";
   }
 
   if ($moviecat == "CH"){
     $days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-    //$times = {"Monday":"9pm","Tuesday":"9pm","Wednesday":"1pm","Thursday":"1pm","Friday":"1pm","Saturday":"6pm","Sunday":"6pm"};
+    Print "<script>var times = {'Monday':'9pm','Tuesday':'9pm','Wednesday':'1pm','Thursday':'1pm','Friday':'1pm','Saturday':'6pm','Sunday':'6pm'};</script>";
   }
 
 
   if ($moviecat == "CH"){
     $days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-    //$times = {"Monday":"1pm","Tuesday":"1pm","Wednesday":"6pm","Thursday":"6pm","Friday":"6pm","Saturday":"12pm","Sunday":"12pm"};
+    Print "<script>var times = {'Monday':'1pm','Tuesday':'1pm','Wednesday':'6pm','Thursday':'6pm','Friday':'6pm','Saturday':'12pm','Sunday':'12pm'};</script>";
   }
 
 ?>
@@ -60,8 +60,8 @@
       }
     ?>
   </select>
-  <br>
-  <b>Time: </b><input type='text' name='time' id='time' disabled/>
+  <br><br>
+  <b>Time: </b><input class='input-field' type='text' name='time' id='time' disabled/>
 </form>
 <script>
   $("#time").val(times["<?php Print $days[0];?>"]);
