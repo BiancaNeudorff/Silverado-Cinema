@@ -65,21 +65,21 @@
   <br><br>
   <h3>Seat Quantities</h3>
   <br><br>
-  <b>Standard Adult: </b><input class='input-field' type='number' name='SA' />
+  <b>Standard Adult: </b><input class='input-field' type='number' name='SA' min='0' value='0'/>
   <br><br>
-  <b>Standard Concession: </b><input class='input-field' type='number' name='SP' />
+  <b>Standard Concession: </b><input class='input-field' type='number' name='SP' min='0' value='0'/>
   <br><br>
-  <b>Standard Child: </b><input class='input-field' type='number' name='SC' />
+  <b>Standard Child: </b><input class='input-field' type='number' name='SC' min='0' value='0'/>
   <br><br>
-  <b>First Class Adult: </b><input class='input-field' type='number' name='FA' />
+  <b>First Class Adult: </b><input class='input-field' type='number' name='FA' min='0' value='0'/>
   <br><br>
-  <b>First Class Child: </b><input class='input-field' type='number' name='FC' />
+  <b>First Class Child: </b><input class='input-field' type='number' name='FC' min='0' value='0'/>
   <br><br>
-  <b>Beanbag, one lonely person: </b><input class='input-field' type='number' name='B1' />
+  <b>Beanbag, one lonely person: </b><input class='input-field' type='number' name='B1' min='0' value='0'/>
   <br><br>
-  <b>Beanbag, up to 2 people: </b><input class='input-field' type='number' name='B2' />
+  <b>Beanbag, up to 2 people: </b><input class='input-field' type='number' name='B2' min='0' value='0'/>
   <br><br>
-  <b>Beanbag, up to 3 children: </b><input class='input-field' type='number' name='B3' />
+  <b>Beanbag, up to 3 children: </b><input class='input-field' type='number' name='B3' min='0' value='0'/>
   <br><br>
 </form>
 <script>
