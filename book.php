@@ -52,16 +52,23 @@
 <br><br>
 <form action="http://titan.csit.rmit.edu.au/~e54061/wp/testbooking.php" method="post">
   <input type='hidden' class='input-field' name='movie' value='<?php Print $moviecat;?>' />
-  <b>Day:</b>
-  <select name='day'>
+  <b>Day: </b>
+  <select name='day' id='day'>
     <?php
       for ($i = 0; $i < count($days); $i++){
         Print "<option value='" . $days[$i] . "'>" . $days[$i] . "</option>";
       }
     ?>
   </select>
+  <br>
+  <b>Time: </b><input type='text' name='time' id='time' disabled/>
 </form>
-
+<script>
+  $("#time").val(times[<?php Print $days[0];?>]);
+  $("#day").change(function() {
+    $("#time").val(times[$("#day").val()]);
+  });
+</script>
 <?php
   include "footer.php";
 ?>
