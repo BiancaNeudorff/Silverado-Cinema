@@ -2,6 +2,7 @@
   require ("header.php");
 ?>
 <div class='row centre'>
+  <!-- Original images below sourced for educational purposes: http://www.flickr.com (creative commons)-->
   <div class='col col-3 centre imgholder' style='background-image:url("https://farm2.staticflickr.com/1299/4687826636_f08e0f9fb6.jpg")'></div>
   <div class='col col-3 centre imgholder' style='background-image:url("https://farm8.staticflickr.com/7370/9412590876_896113666b_k.jpg")'></div>
   <div class='col col-3 centre imgholder' style='background-image:url("https://farm3.staticflickr.com/2404/2349758304_a0a6c155b3_b.jpg")'></div>

@@ -6,6 +6,7 @@
   <div class='movie current-movie'></div>
 </div>
 <div class='row centre'>
+  <!-- Original image below sourced for educational purposes -->
   <div class='col col-3 movie' style='background-image:url("http://2.bp.blogspot.com/-id0szKjvbxA/VV59veSLPhI/AAAAAAAAMlw/c0r2lA_iD2E/s1600/InsideOut54f771108303d.jpg")'>
     <div class='movie-info-holder'>
       <div class='movie-info'>
@@ -47,6 +48,7 @@
       </div>
     </div>
   </div>
+  <!-- Original image below sourced for educational purposes: http://www.imbd.com -->
   <div class='col col-3 movie' style='background-image:url("http://ia.media-imdb.com/images/M/MV5BMTU2MTkwMzM0NF5BMl5BanBnXkFtZTgwMjA0NDA4NTE@._V1_SX640_SY720_.jpg")'>
     <div class='movie-info-holder'>
       <div class='movie-info'>
@@ -82,6 +84,7 @@
       </div>
     </div>
   </div>
+  <!-- Original image below sourced for educational purposes: http://www.imbd.com -->
   <div class='col col-3 movie' style='background-image:url("http://ia.media-imdb.com/images/M/MV5BMTg4Mjc0NTE1NV5BMl5BanBnXkFtZTgwNzcwNTQ3NTE@._V1_SX640_SY720_.jpg")'>
     <div class='movie-info-holder'>
       <div class='movie-info'>
@@ -118,6 +121,7 @@
       </div>
     </div>
   </div>
+  <!-- Original image below sourced for educational purposes: http://www.imbd.com -->
   <div class='col col-3 movie' style='background-image:url("http://ia.media-imdb.com/images/M/MV5BMjE0MDI3NTE5NF5BMl5BanBnXkFtZTgwNzI3ODM2NjE@._V1_SX640_SY720_.jpg")'>
     <div class='movie-info-holder'>
       <div class='movie-info'>

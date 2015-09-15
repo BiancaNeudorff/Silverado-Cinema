@@ -12,6 +12,7 @@
   for an out of this world experience and a Dolby Sound system for ultimate sound.
 </p>
 <br>
+<!-- Original image below sourced for educational purposes: http://www.flickr.com (creative commons) -->
 <img src='https://farm2.staticflickr.com/1299/4687826636_f08e0f9fb6.jpg' class='content-img' />
 <br>
 <h4>Our Complex</h4>
