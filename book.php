@@ -55,7 +55,7 @@
   <b>Day:</b>
   <select name='day'>
     <?php
-      for ($i = 0; $i < $days.length; $i++){
+      for ($i = 0; $i < count($days); $i++){
         Print "<option value='" + $days[$i] + "'>" + $days[$i] + "</option>";
       }
     ?>
