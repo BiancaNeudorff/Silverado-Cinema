@@ -52,6 +52,7 @@
 <br><br>
 <form action="http://titan.csit.rmit.edu.au/~e54061/wp/testbooking.php" method="post" onsubmit="return checkForm()">
   <input type='hidden' class='input-field' name='movie' value='<?php Print $moviecat;?>' />
+  <input type='hidden' class='input-field' name='price' value='0.00' />
   <b>Day: </b>
   <select name='day' id='day'>
     <?php
@@ -61,12 +62,12 @@
     ?>
   </select>
   <br><br>
-  <b>Time: </b><input class='input-field' type='text' name='time' id='time' disabled/>
+  <b>Time: </b><input class='input-field' type='text' name='time' id='time' readonly/>
   <br><br>
   <h3>Seat Quantities</h3>
   <div class='row booking'>
     <div class='col col-5'>
-      <b>Standard Adult: </b><input class='input-field' type='number' name='SA' min='0' value='0'/>
+      <b>Standard Adult: </b><input class='input-field' type='number' name='SA' min='0' value='0' onchange='calculatePrice()'/>
     </div>
     <div class='col col-3'>
       $<span class='total-SA'>0.00</span>
@@ -74,7 +75,7 @@
   </div>
   <div class='row booking'>
     <div class='col col-5'>
-      <b>Standard Concession: </b><input class='input-field' type='number' name='SP' min='0' value='0'/>
+      <b>Standard Concession: </b><input class='input-field' type='number' name='SP' min='0' value='0' onchange='calculatePrice()'/>
     </div>
     <div class='col col-3'>
       $<span class='total-SP'>0.00</span>
@@ -82,7 +83,7 @@
   </div>
   <div class='row booking'>
     <div class='col col-5'>
-      <b>Standard Child: </b><input class='input-field' type='number' name='SC' min='0' value='0'/>
+      <b>Standard Child: </b><input class='input-field' type='number' name='SC' min='0' value='0' onchange='calculatePrice()'/>
     </div>
     <div class='col col-3'>
       $<span class='total-SC'>0.00</span>
@@ -90,7 +91,7 @@
   </div>
   <div class='row booking'>
     <div class='col col-5'>
-      <b>First Class Adult: </b><input class='input-field' type='number' name='FA' min='0' value='0'/>
+      <b>First Class Adult: </b><input class='input-field' type='number' name='FA' min='0' value='0' onchange='calculatePrice()'/>
     </div>
     <div class='col col-3'>
       $<span class='total-FA'>0.00</span>
@@ -98,7 +99,7 @@
   </div>
   <div class='row booking'>
     <div class='col col-5'>
-      <b>First Class Child: </b><input class='input-field' type='number' name='FC' min='0' value='0'/>
+      <b>First Class Child: </b><input class='input-field' type='number' name='FC' min='0' value='0' onchange='calculatePrice()'/>
     </div>
     <div class='col col-3'>
       $<span class='total-FC'>0.00</span>
@@ -106,7 +107,7 @@
   </div>
   <div class='row booking'>
     <div class='col col-5'>
-      <b>Beanbag, one lonely person: </b><input class='input-field' type='number' name='B1' min='0' value='0'/>
+      <b>Beanbag, one lonely person: </b><input class='input-field' type='number' name='B1' min='0' value='0' onchange='calculatePrice()'/>
     </div>
     <div class='col col-3'>
       $<span class='total-B1'>0.00</span>
@@ -114,7 +115,7 @@
   </div>
   <div class='row booking'>
     <div class='col col-5'>
-      <b>Beanbag, up to 2 people: </b><input class='input-field' type='number' name='B2' min='0' value='0'/>
+      <b>Beanbag, up to 2 people: </b><input class='input-field' type='number' name='B2' min='0' value='0' onchange='calculatePrice()'/>
     </div>
     <div class='col col-3'>
       $<span class='total-B2'>0.00</span>
@@ -122,7 +123,7 @@
   </div>
   <div class='row booking'>
     <div class='col col-5'>
-      <b>Beanbag, up to 3 children: </b><input class='input-field' type='number' name='B3' min='0' value='0'/>
+      <b>Beanbag, up to 3 children: </b><input class='input-field' type='number' name='B3' min='0' value='0' onchange='calculatePrice()'/>
     </div>
     <div class='col col-3'>
       $<span class='total-B3'>0.00</span>
@@ -160,6 +161,83 @@
       return false;
     }
     return true;
+  }
+
+  function calculatePrice(){
+    var day = $("#day").val();
+    var time = $("#time").val();
+    //Calculate SA
+    var SA = 0.00;
+    var SP = 0.00;
+    var SC = 0.00;
+    var FA = 0.00;
+    var FC = 0.00;
+    var B1 = 0.00;
+    var B2 = 0.00;
+    var B3 = 0.00;
+
+    if (day == "Monday" || day == "Tuesday"){
+      SA = parseInt($("input[name=SA]").val()) * 12.00;
+      SP = parseInt($("input[name=SP]").val()) * 10.00;
+      SC = parseInt($("input[name=SC]").val()) * 8.00;
+      FA = parseInt($("input[name=FA]").val()) * 25.00;
+      FC = parseInt($("input[name=FC]").val()) * 20.00;
+      B1 = parseInt($("input[name=B1]").val()) * 20.00;
+      B2 = parseInt($("input[name=B2]").val()) * 20.00;
+      B3 = parseInt($("input[name=B3]").val()) * 20.00;
+    }
+
+    if (time == "1pm"){
+      if (day == "Wednesday" || day == "Thursday" || day == "Friday"){
+        SA = parseInt($("input[name=SA]").val()) * 12.00;
+        SP = parseInt($("input[name=SP]").val()) * 10.00;
+        SC = parseInt($("input[name=SC]").val()) * 8.00;
+        FA = parseInt($("input[name=FA]").val()) * 25.00;
+        FC = parseInt($("input[name=FC]").val()) * 20.00;
+        B1 = parseInt($("input[name=B1]").val()) * 20.00;
+        B2 = parseInt($("input[name=B2]").val()) * 20.00;
+        B3 = parseInt($("input[name=B3]").val()) * 20.00;
+      }
+    } else {
+      if (day == "Wednesday" || day == "Thursday" || day == "Friday"){
+        SA = parseInt($("input[name=SA]").val()) * 18.00;
+        SP = parseInt($("input[name=SP]").val()) * 15.00;
+        SC = parseInt($("input[name=SC]").val()) * 12.00;
+        FA = parseInt($("input[name=FA]").val()) * 30.00;
+        FC = parseInt($("input[name=FC]").val()) * 25.00;
+        B1 = parseInt($("input[name=B1]").val()) * 30.00;
+        B2 = parseInt($("input[name=B2]").val()) * 30.00;
+        B3 = parseInt($("input[name=B3]").val()) * 30.00;
+      }
+    }
+
+    if (day == "Saturday" || day == "Sunday"){
+      SA = parseInt($("input[name=SA]").val()) * 18.00;
+      SP = parseInt($("input[name=SP]").val()) * 15.00;
+      SC = parseInt($("input[name=SC]").val()) * 12.00;
+      FA = parseInt($("input[name=FA]").val()) * 30.00;
+      FC = parseInt($("input[name=FC]").val()) * 25.00;
+      B1 = parseInt($("input[name=B1]").val()) * 30.00;
+      B2 = parseInt($("input[name=B2]").val()) * 30.00;
+      B3 = parseInt($("input[name=B3]").val()) * 30.00;
+    }
+
+    //Display subtotals
+    $(".total-SA").val(SA);
+    $(".total-SP").val(SP);
+    $(".total-SC").val(SC);
+    $(".total-FA").val(FA);
+    $(".total-FC").val(FC);
+    $(".total-B1").val(B1);
+    $(".total-B2").val(B2);
+    $(".total-B3").val(B3);
+
+    //Calculate grand total
+    var total = SA + SP + SC + FA + FC + B1 + B2 + B3;
+
+    $("#total").val(total);
+    $("input[name=price]").val(total);
+
   }
 </script>
 <?php
