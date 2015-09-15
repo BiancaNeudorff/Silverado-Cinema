@@ -143,6 +143,20 @@
   });
 
   function checkForm(){
+    $(".error").hide();
+    var totalNumTickets = parseInt($("input[name=SA]").val())
+                          + parseInt($("input[name=SP]").val())
+                          + parseInt($("input[name=SC]").val())
+                          + parseInt($("input[name=FA]").val())
+                          + parseInt($("input[name=FC]").val())
+                          + parseInt($("input[name=B1]").val())
+                          + parseInt($("input[name=B2]").val())
+                          + parseInt($("input[name=B3]").val());
+
+    if (totalNumTickets <= 0){
+      $(".error").html("Please book at least one ticket");
+      return false;
+    }
     return true;
   }
 </script>
