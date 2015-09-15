@@ -62,6 +62,25 @@
   </select>
   <br><br>
   <b>Time: </b><input class='input-field' type='text' name='time' id='time' disabled/>
+  <br><br>
+  <h3>Seat Quantities</h3>
+  <br><br>
+  <b>Standard Adult: </b><input class='input-field' type='number' name='SA' />
+  <br><br>
+  <b>Standard Concession: </b><input class='input-field' type='number' name='SP' />
+  <br><br>
+  <b>Standard Child: </b><input class='input-field' type='number' name='SC' />
+  <br><br>
+  <b>First Class Adult: </b><input class='input-field' type='number' name='FA' />
+  <br><br>
+  <b>First Class Child: </b><input class='input-field' type='number' name='FC' />
+  <br><br>
+  <b>Beanbag, one lonely person: </b><input class='input-field' type='number' name='B1' />
+  <br><br>
+  <b>Beanbag, up to 2 people: </b><input class='input-field' type='number' name='B2' />
+  <br><br>
+  <b>Beanbag, up to 3 children: </b><input class='input-field' type='number' name='B3' />
+  <br><br>
 </form>
 <script>
   $("#time").val(times["<?php Print $days[0];?>"]);
