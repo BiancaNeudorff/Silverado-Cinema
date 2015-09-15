@@ -50,7 +50,10 @@
 <h1>Book Movie</h1>
 <h3><?php Print $moviename; ?></h3>
 <br><br>
-<form action="http://titan.csit.rmit.edu.au/~e54061/wp/testbooking.php" method="post">
+<div class='error' style='display:none'>
+
+</div>
+<form action="http://titan.csit.rmit.edu.au/~e54061/wp/testbooking.php" method="post" onsubmit="return checkForm()">
   <input type='hidden' class='input-field' name='movie' value='<?php Print $moviecat;?>' />
   <b>Day: </b>
   <select name='day' id='day'>
@@ -128,12 +131,20 @@
       $<span class='total-B3'>0.00</span>
     </div>
   </div>
+  <br><br>
+  <h3>Total: $<span id='total'>0.00</span></h3>
+  <br><br>
+  <input class='input-submit' type='submit' value='Book' />
 </form>
 <script>
   $("#time").val(times["<?php Print $days[0];?>"]);
   $("#day").change(function() {
     $("#time").val(times[$("#day").val()]);
   });
+
+  function checkForm(){
+    return true;
+  }
 </script>
 <?php
   include "footer.php";
