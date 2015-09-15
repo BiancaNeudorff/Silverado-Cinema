@@ -50,9 +50,6 @@
 <h1>Book Movie</h1>
 <h3><?php Print $moviename; ?></h3>
 <br><br>
-<div class='error' style='display:none'>
-
-</div>
 <form action="http://titan.csit.rmit.edu.au/~e54061/wp/testbooking.php" method="post" onsubmit="return checkForm()">
   <input type='hidden' class='input-field' name='movie' value='<?php Print $moviecat;?>' />
   <b>Day: </b>
@@ -131,7 +128,11 @@
       $<span class='total-B3'>0.00</span>
     </div>
   </div>
-  <br><br>
+  <br>
+  <div class='error' style='display:none'>
+
+  </div>
+  <br>
   <h3>Total: $<span id='total'>0.00</span></h3>
   <br><br>
   <input class='input-submit' type='submit' value='Book' />
@@ -155,6 +156,7 @@
 
     if (totalNumTickets <= 0){
       $(".error").html("Please book at least one ticket");
+      $(".error").show();
       return false;
     }
     return true;
