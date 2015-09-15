@@ -24,7 +24,7 @@
               <a href='index.php'>HOME</a>
               <a href='cinema.php'>CINEMA</a>
               <a href='movies.php'>MOVIES</a>
-              <a href='#' onclick='loadPage("contact")'>CONTACT</a>
+              <a href='contact.php'>CONTACT</a>
           </div>
           <div class='col col-1'></div>
       </div>
