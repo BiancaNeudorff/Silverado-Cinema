@@ -54,7 +54,7 @@
   <input type='hidden' class='input-field' name='movie' value='<?php Print $moviecat;?>' />
   <input type='hidden' class='input-field' name='price' value='0.00' />
   <b>Day: </b>
-  <select name='day' id='day'>
+  <select name='day' id='day' onchange='calculatePrice()'>
     <?php
       for ($i = 0; $i < count($days); $i++){
         Print "<option value='" . $days[$i] . "'>" . $days[$i] . "</option>";
