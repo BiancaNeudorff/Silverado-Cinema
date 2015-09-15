@@ -177,6 +177,61 @@
 <div class='schedule-bar schedule-art'>Art / Foreign (3PM)</div>
 <div class='schedule-bar schedule-romance'>Romantic Comedy (6PM)</div>
 <div class='schedule-bar schedule-action'>Action (9PM)</div>
+<br><br>
+<h3>Pricing</h3>
+<br>
+<table>
+  <tr>
+    <th>Ticket</th>
+    <th>Monday - Tuesday</th>
+    <th>Wednesday - Friday</th>
+    <th>Wednesday - Friday (1pm session)</th>
+    <th>Saturday - Sunday</th>
+  </tr>
+  <tr>
+    <td>Standard­ Adult</td>
+    <td>$12.00</td>
+    <td>$18.00</td>
+    <td>$12.00</td>
+    <td>$18.00</td>
+  </tr>
+  <tr>
+    <td>Standard­ Concession</td>
+    <td>$10.00</td>
+    <td>$15.00</td>
+    <td>$10.00</td>
+    <td>$15.00</td>
+  </tr>
+  <tr>
+    <td>Standard­ Child</td>
+    <td>$8.00</td>
+    <td>$12.00</td>
+    <td>$8.00</td>
+    <td>$12.00</td>
+  </tr>
+  <tr>
+    <td>First Class­ Adult</td>
+    <td>$25.00</td>
+    <td>$30.00</td>
+    <td>$25.00</td>
+    <td>$30.00</td>
+  </tr>
+  <tr>
+    <td>First Class­ Child</td>
+    <td>$20.00</td>
+    <td>$25.00</td>
+    <td>$20.00</td>
+    <td>$25.00</td>
+  </tr>
+  <tr>
+    <td>Beanbag (Any)</td>
+    <td>$20.00</td>
+    <td>$30.00</td>
+    <td>$20.00</td>
+    <td>$30.00</td>
+  </tr>
+</table>
+<br><br>
 <script>
 //Only run animation if non mobile
 if ($(document).width() > 768){
