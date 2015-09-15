@@ -64,7 +64,7 @@
   <b>Time: </b><input class='input-field' type='text' name='time' id='time' disabled/>
   <br><br>
   <h3>Seat Quantities</h3>
-  <div class='row'>
+  <div class='row booking'>
     <div class='col col-5'>
       <b>Standard Adult: </b><input class='input-field' type='number' name='SA' min='0' value='0'/>
     </div>
@@ -72,26 +72,62 @@
       $<span class='total-SA'>0.00</span>
     </div>
   </div>
-  <div class='row'>
+  <div class='row booking'>
     <div class='col col-5'>
-      <b>Standard Concession: </b><input class='input-field' type='number' name='SC' min='0' value='0'/>
+      <b>Standard Concession: </b><input class='input-field' type='number' name='SP' min='0' value='0'/>
+    </div>
+    <div class='col col-3'>
+      $<span class='total-SP'>0.00</span>
+    </div>
+  </div>
+  <div class='row booking'>
+    <div class='col col-5'>
+      <b>Standard Child: </b><input class='input-field' type='number' name='SC' min='0' value='0'/>
     </div>
     <div class='col col-3'>
       $<span class='total-SC'>0.00</span>
     </div>
   </div>
-  <b>Standard Child: </b><input class='input-field' type='number' name='SC' min='0' value='0'/>
-  <br><br>
-  <b>First Class Adult: </b><input class='input-field' type='number' name='FA' min='0' value='0'/>
-  <br><br>
-  <b>First Class Child: </b><input class='input-field' type='number' name='FC' min='0' value='0'/>
-  <br><br>
-  <b>Beanbag, one lonely person: </b><input class='input-field' type='number' name='B1' min='0' value='0'/>
-  <br><br>
-  <b>Beanbag, up to 2 people: </b><input class='input-field' type='number' name='B2' min='0' value='0'/>
-  <br><br>
-  <b>Beanbag, up to 3 children: </b><input class='input-field' type='number' name='B3' min='0' value='0'/>
-  <br><br>
+  <div class='row booking'>
+    <div class='col col-5'>
+      <b>First Class Adult: </b><input class='input-field' type='number' name='FA' min='0' value='0'/>
+    </div>
+    <div class='col col-3'>
+      $<span class='total-FA'>0.00</span>
+    </div>
+  </div>
+  <div class='row booking'>
+    <div class='col col-5'>
+      <b>First Class Child: </b><input class='input-field' type='number' name='FC' min='0' value='0'/>
+    </div>
+    <div class='col col-3'>
+      $<span class='total-FC'>0.00</span>
+    </div>
+  </div>
+  <div class='row booking'>
+    <div class='col col-5'>
+      <b>Beanbag, one lonely person: </b><input class='input-field' type='number' name='B1' min='0' value='0'/>
+    </div>
+    <div class='col col-3'>
+      $<span class='total-B1'>0.00</span>
+    </div>
+  </div>
+  <div class='row booking'>
+    <div class='col col-5'>
+      <b>Beanbag, up to 2 people: </b><input class='input-field' type='number' name='B2' min='0' value='0'/>
+    </div>
+    <div class='col col-3'>
+      $<span class='total-B2'>0.00</span>
+    </div>
+  </div>
+  <div class='row booking'>
+    <div class='col col-5'>
+      <b>Beanbag, up to 3 children: </b><input class='input-field' type='number' name='B3' min='0' value='0'/>
+    </div>
+    <div class='col col-3'>
+      $<span class='total-B3'>0.00</span>
+    </div>
+  </div>
 </form>
 <script>
   $("#time").val(times["<?php Print $days[0];?>"]);
