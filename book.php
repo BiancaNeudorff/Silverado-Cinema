@@ -65,9 +65,23 @@
   <br><br>
   <h3>Seat Quantities</h3>
   <br><br>
-  <b>Standard Adult: </b><input class='input-field' type='number' name='SA' min='0' value='0'/>
+  <div class='row'>
+    <div class='col col-3'>
+      <b>Standard Adult: </b><input class='input-field' type='number' name='SA' min='0' value='0'/>
+    </div>
+    <div class='col col-3'>
+      $<span class='total-SA'>0.00</span>
+    </div>
+  </div>
   <br><br>
-  <b>Standard Concession: </b><input class='input-field' type='number' name='SP' min='0' value='0'/>
+  <div class='row'>
+    <div class='col col-3'>
+      <b>Standard Concession: </b><input class='input-field' type='number' name='SC' min='0' value='0'/>
+    </div>
+    <div class='col col-3'>
+      $<span class='total-SA'>0.00</span>
+    </div>
+  </div>
   <br><br>
   <b>Standard Child: </b><input class='input-field' type='number' name='SC' min='0' value='0'/>
   <br><br>
