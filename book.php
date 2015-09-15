@@ -223,20 +223,20 @@
     }
 
     //Display subtotals
-    $(".total-SA").val(SA);
-    $(".total-SP").val(SP);
-    $(".total-SC").val(SC);
-    $(".total-FA").val(FA);
-    $(".total-FC").val(FC);
-    $(".total-B1").val(B1);
-    $(".total-B2").val(B2);
-    $(".total-B3").val(B3);
+    $(".total-SA").html(SA.toFixed(2));
+    $(".total-SP").html(SP.toFixed(2));
+    $(".total-SC").html(SC.toFixed(2));
+    $(".total-FA").html(FA.toFixed(2));
+    $(".total-FC").html(FC.toFixed(2));
+    $(".total-B1").html(B1.toFixed(2));
+    $(".total-B2").html(B2.toFixed(2));
+    $(".total-B3").html(B3.toFixed(2));
 
     //Calculate grand total
     var total = SA + SP + SC + FA + FC + B1 + B2 + B3;
 
-    $("#total").val(total);
-    $("input[name=price]").val(total);
+    $("#total").html(total.toFixed(2));
+    $("input[name=price]").val(total.toFixed(2));
 
   }
 </script>
