@@ -64,7 +64,7 @@
   <b>Time: </b><input type='text' name='time' id='time' disabled/>
 </form>
 <script>
-  $("#time").val(times[<?php Print $days[0];?>]);
+  $("#time").val(times["<?php Print $days[0];?>"]);
   $("#day").change(function() {
     $("#time").val(times[$("#day").val()]);
   });
