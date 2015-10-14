@@ -289,9 +289,8 @@ h1, h2, h3, h4, h5, h6 {
   border:0px;
   font-size:14px;
   background:#FFF;
-  border-radius: 5px;
-  -webkit-border-radius:5px;
   border:1px solid #222;
+  margin-left: 5px;
 }
 
 .input-submit:hover {
@@ -328,8 +327,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .booking {
-  padding-top:5px;
-  padding-bottom:5px;
+  padding-top:0px;
+  padding-bottom:0px;
 }
 
 .error {
