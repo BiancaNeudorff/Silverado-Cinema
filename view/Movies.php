@@ -27,13 +27,30 @@
               <div class='col col-4'>
                 <b>Showing times</b>
                 <ul>
-                  <li>Monday - <?php echo $movies->$categories[$m]->screenings->Monday; ?></li>
-                  <li>Tuesday - <?php echo $movies->$categories[$m]->screenings->Tuesday; ?></li>
-                  <li>Wednesday - <?php echo $movies->$categories[$m]->screenings->Wednesday; ?></li>
-                  <li>Thursday - <?php echo $movies->$categories[$m]->screenings->Thursday; ?></li>
-                  <li>Friday - <?php echo $movies->$categories[$m]->screenings->Friday; ?></li>
-                  <li>Saturday - <?php echo $movies->$categories[$m]->screenings->Saturday; ?></li>
-                  <li>Sunday - <?php echo $movies->$categories[$m]->screenings->Sunday; ?></li>
+                  <?php
+                  if (isset($movies->$categories[$m]->screenings->Monday)){
+                    echo "<li>Monday - " . $movies->$categories[$m]->screenings->Monday . "</li>";
+                  }
+                  if (isset($movies->$categories[$m]->screenings->Tuesday)){
+                    echo "<li>Tuesday - " . $movies->$categories[$m]->screenings->Tuesday . "</li>";
+                  }
+                  if (isset($movies->$categories[$m]->screenings->Wednesday)){
+                    echo "<li>Wednesday - " . $movies->$categories[$m]->screenings->Wednesday . "</li>";
+                  }
+                  if (isset($movies->$categories[$m]->screenings->Thursday)){
+                    echo "<li>Thursday - " . $movies->$categories[$m]->screenings->Thursday . "</li>";
+                  }
+                  if (isset($movies->$categories[$m]->screenings->Friday)){
+                    echo "<li>Friday - " . $movies->$categories[$m]->screenings->Friday . "</li>";
+                  }
+                  if (isset($movies->$categories[$m]->screenings->Saturday)){
+                    echo "<li>Saturday - " . $movies->$categories[$m]->screenings->Saturday . "</li>";
+                  }
+                  if (isset($movies->$categories[$m]->screenings->Sunday)){
+                    echo "<li>Sunday - " . $movies->$categories[$m]->screenings->Sunday . "</li>";
+                  }
+                  ?>
+
                 </ul>
               </div>
               <div class='col col-4'>
