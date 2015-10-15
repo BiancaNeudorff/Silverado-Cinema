@@ -5,6 +5,7 @@ include_once(dirname(__DIR__)."/model/InfoModel.php");
 include_once(dirname(__DIR__)."/model/MovieModel.php");
 include_once(dirname(__DIR__)."/model/ContactModel.php");
 include_once(dirname(__DIR__)."/model/CartModel.php");
+include_once(dirname(__DIR__)."/model/CheckoutModel.php");
 
 class Controller {
 
@@ -54,6 +55,19 @@ class Controller {
     if ($page == "cart"){
       $cart = new CartModel();
       include dirname(__DIR__)."/view/Cart.php";
+    }
+
+    if ($page == "checkout"){
+      $checkout = new CheckoutModel();
+      $cart = new CartModel();
+      include dirname(__DIR__)."/view/Checkout.php";
+    }
+
+    if ($page == "ticket"){
+      $checkout = new CheckoutModel();
+      $ticket = $checkout->getTicket();
+      $cart = new CartModel();
+      include dirname(__DIR__)."/view/Ticket.php";
     }
 
     include dirname(__DIR__)."/view/Footer.php";

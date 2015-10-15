@@ -13,6 +13,14 @@ class CartModel {
     }
   }
 
+  public function isEmpty() {
+    if (count($this->getReservations()) == 0){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   public function createReservation($opts) {
     $reservations = $this->getReservations();
     array_push($reservations, $opts);
@@ -29,8 +37,59 @@ class CartModel {
     return $this->getReservations()[$id];
   }
 
+  public function printReservation($id){
+    $movies = new MovieModel();
+    $reservation = $this->getReservation($id);
+    $movie = $movies->getMovieByType($reservation->movie);
+    $output = "<h3>" . $movie->title . "</h3>";
+    $output = $output . $movie->summary;
+    $output = $output . "<br><br><b>Session: </b>" . $reservation->day . " " . $reservation->time;
+    $output = $output . "<br><br>";
+    if ($reservation->SA > 0){
+      $output = $output . "Standard Adult x " . $reservation->SA . "<br><br>";
+    }
+    if ($reservation->SP > 0){
+      $output = $output . "Standard Concession x " . $reservation->SP . "<br><br>";
+    }
+    if ($reservation->SC > 0){
+      $output = $output . "Standard Child x " . $reservation->SC . "<br><br>";
+    }
+    if ($reservation->FA > 0){
+      $output = $output . "First Class Adult x " . $reservation->FA . "<br><br>";
+    }
+    if ($reservation->FC > 0){
+      $output = $output . "First Class Child x " . $reservation->FC . "<br><br>";
+    }
+
+    if ($reservation->B1 > 0){
+      $output = $output . "Beanbag 1 lonely person x " . $reservation->B1 . "<br><br>";
+    }
+
+    if ($reservation->B2 > 0){
+      $output = $output . "Beanbag 2 people x " . $reservation->B2 . "<br><br>";
+    }
+
+    if ($reservation->B3 > 0){
+      $output = $output . "Beanbag 3 children x " . $reservation->B3 . "<br><br>";
+    }
+
+    return $output;
+  }
+
+  public function clearReservation($id){
+    $new = array();
+    $reservations = $this->getReservations();
+    for ($i = 0;$i < count($reservations); $i++){
+      if ($i != $id){
+        array_push($new, $reservations[$i]);
+      }
+    }
+    $_SESSION['reservations'] = $new;
+  }
+
   public function clear(){
-    $_SESSION['reservations'] = array();
+    session_destroy();
+    session_start();
   }
 
   public function calculateCartTotal(){

@@ -16,6 +16,12 @@ if (count($reservations) == 0){
   <div class='col col-10'>
     <form action='action/applyVoucher.php' method="post" onsubmit="return checkVoucher()">
       <b style='display:none' id='voucherError'>Error: Invalid voucher format<br><br></b>
+      <?php
+        if ($cart->getVoucher() != "" && $cart->getVoucherDiscount() == 0){
+          Print "<b>Error: Invalid voucher<br><br></b>";
+        }
+      ?>
+      <b id='voucherError' style='display:none'>Error: Invalid voucher format<br><br></b>
       <b>Voucher:</b> <input class='input-field' id='voucher' name='voucher' /><input class='input-submit' type='submit' value='Apply' />
     </form>
     <br><br>
@@ -35,7 +41,7 @@ if (count($reservations) == 0){
     <br>
     <h1>$<?php Print $cart->calculateCartGrandTotal(); ?></h1>
     <br><br>
-    <a href="action/clearCart.php" class="bookbtn">Empty Cart</a><a href="javascript:void(0)" class="bookbtn">Checkout</a>
+    <a href="action/clearCart.php" class="bookbtn">Empty Cart</a><a href="checkout.php" class="bookbtn">Checkout</a>
   </div>
 </div>
 <?php

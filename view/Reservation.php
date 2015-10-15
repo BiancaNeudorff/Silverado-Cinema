@@ -20,7 +20,7 @@ $movie = $model->getMovieByType($reservation->movie);
     <br><br><br>
     <input class="input-submit" type="submit" value="Update Quantities" >
     <br><br>
-    <a href="javascript:void(0)" class="bookbtn">Remove from cart</a>
+    <a href="action/removeReservation.php?id=<?php Print $reservation->id; ?>" class="bookbtn">Remove from cart</a>
     <br><br>
     <h1>$<?php echo $cart->calculateReservationTotal($reservation); ?></h1>
   </div>
